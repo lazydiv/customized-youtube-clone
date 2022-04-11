@@ -19,18 +19,18 @@ const Header = () => {
     before:w-full before:h-full
     before:backdrop-blur-md'>
       <div className='flex h-full items-center'>
-          <i className="bi-list ml-5 text-2xl mr-2 opacity-70" role="button" onClick={() => SetIsOpen(!IsOpen)} aria-label="GitHub"></i>
+          <i className="bi-list ml-5 text-2xl mr-2 opacity-70" role="button"  onClick={() => SetIsOpen(!IsOpen)} aria-label="list"></i>
         <div className='mx-2 md:mx-10 text-2xl'>
           <i className="bi-youtube  mr-2 text-mainRed" role="img" aria-label="Youtube"></i>
           Youtube
         </div>
         <div className='absolute  right-0 mr-5'>
-          <i className="float-left visible md:invisible bi-search text-xl mr-5 cursor-pointer" role="button" onClick={() => setIsVisible(!isVisible)} aria-label="search"></i>
+          {isVisible ? <i className="float-left visible md:invisible bi-x-lg text-xl mr-5 cursor-pointer" role="button"  onClick={() => setIsVisible(!isVisible)} aria-label="search" /> : <i className="float-left visible md:invisible bi-search text-xl mr-5 cursor-pointer" role="button"  onClick={() => setIsVisible(!isVisible)} aria-label="search" />}
           <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className='mr-5'>
            {theme === 'dark' ? (<i className="bi-sun-fill text-xl cursor-pointer" role="img" aria-label="sun" />) : <i className="bi-moon-fill text-xl cursor-pointer" role="img" aria-label="moon" />}
           </button>
-          <div className='inline-block mt-1'>Title</div>
-          <div className='w-8 h-8 float-right ml-5  rounded-full bg-slate-700 '></div>
+          <div className='hidden md:inline-block mt-1'>Yehia</div>
+          <div className='w-8 h-8 float-right md:ml-5  rounded-full bg-slate-700 '></div>
         </div>
       </div>
       {isVisible ? (<Search visible='visible'/>) : (<Search visible='invisible'/>)}
