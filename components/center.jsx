@@ -1,7 +1,7 @@
 import { data } from 'autoprefixer';
 import {useState, useEffect} from 'react'
 
-const url = `https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics&chart=mostPopular&maxResults=50&regionCode=eg&key=${process.env.YOUTUBE_API}`
+const url = `https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics&chart=mostPopular&maxResults=50&regionCode=eg&key=AIzaSyDXyYmFQRagjnlICfyLW9uyEc3-9rqZLpE`
 
 const Center = () => {
   const [data, setData] = useState(null)
