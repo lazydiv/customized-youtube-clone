@@ -26,7 +26,7 @@ body::-webkit-scrollbar {
 
 @layer components  {
   body {
-    @apply bg-[#eeeeee] dark:bg-mainBlack text-gray-900 dark:text-white 
+    @apply bg-[#eeeeee] dark:bg-mainBlack text-gray-900 dark:text-white ;
   }
   
 }
